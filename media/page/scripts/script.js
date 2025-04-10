@@ -160,13 +160,13 @@ function openWelcome() {
 //  Load Blog Manifest and Render Blogs List
 // ====================
 function loadBlogManifest() {
-  fetch('blogs/blogs.json?_=' + new Date().getTime())
+  fetch('/blogs/blogs.json?_=' + new Date().getTime())
     .then(response => {
       if (!response.ok) throw new Error('Failed to load blog manifest.');
       return response.json();
     })
     .then(data => {
-      blogFiles = data.map(filename => 'blogs/' + filename);
+      blogFiles = data.map(filename => '/blogs/' + filename);
       renderBlogsList();
     })
     .catch(err => console.error("Error loading blog manifest:", err));
