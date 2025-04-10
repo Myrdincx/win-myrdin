@@ -1,0 +1,186 @@
+body {
+  background-color: teal;
+  margin: 0;
+  padding: 1rem;
+  font-family: 'Pixelated MS Sans Serif', sans-serif;
+  height: 100vh;
+  overflow: hidden;
+}
+
+/* Common window styling */
+.window {
+  position: absolute;
+  top: 100px;
+  left: 100px;
+  width: 400px;
+  min-height: 300px;
+  height: auto;
+  resize: both;
+  overflow: auto;
+  z-index: 250;
+}
+
+.window.maximized {
+  top: 0 !important;
+  left: 0 !important;
+  width: 100vw !important;
+  height: calc(100vh - 2rem);
+  margin: 0;
+}
+
+.title-bar {
+  padding: 0.5rem;
+  font-size: 1rem;
+  z-index: 260;
+  cursor: move;
+}
+
+.window-body {
+  padding: 1rem;
+}
+
+/* Resize handle for all windows */
+.resize-handle {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: 16px;
+  height: 16px;
+  background: url('https://unpkg.com/98.css@1.0.0/dist/images/resize.png') no-repeat center center;
+  background-size: contain;
+  cursor: se-resize;
+}
+
+/* Blogs window specific styling */
+#blogsWindow {
+  top: 150px;
+  left: 120px;
+  width: 500px;
+  min-height: 400px;
+  display: none; /* Initially hidden */
+}
+
+/* Blogs list styling */
+#blogsList {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+#blogsList li {
+  padding: 0.5rem;
+  border-bottom: 1px solid #ccc;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+#blogsList li:hover {
+  background-color: #e0e0e0;
+}
+
+/* Start Menu styling */
+.start-menu {
+  position: fixed;
+  bottom: 2.2rem;
+  left: 0.5rem;
+  background-color: silver;
+  border: 2px outset white;
+  padding: 0.5rem;
+  display: none;
+  width: 180px;
+  z-index: 350;
+}
+
+.start-menu ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.start-menu li {
+  padding: 0.3rem 0.5rem;
+  cursor: pointer;
+}
+
+.start-menu li:hover {
+  background-color: navy;
+  color: white;
+}
+
+/* Taskbar styling */
+.taskbar {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background: silver;
+  border-top: 2px solid white;
+  padding: 0.3rem;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  z-index: 300;
+}
+
+.start-button {
+  background: #c0c0c0;
+  border: 2px outset white;
+  padding: 0.2rem 1rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}
+
+.start-logo {
+  width: 16px;
+  height: 16px;
+  margin-right: 8px;
+}
+
+/* Taskbar app buttons: use original settings */
+.taskbar-app-button {
+  margin-left: 0.5rem;
+  background: #c0c0c0;
+  border: 2px outset white;
+  padding: 0.2rem 1.5rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}
+
+.taskbar-icon {
+  width: 16px;
+  height: 16px;
+  margin-right: 8px;
+}
+
+.taskbar-app-button.active {
+  border: 2px inset #808080;
+  background-color: #a0a0a0;
+}
+
+/* Table of Contents Styling: Retro Table Look */
+.table-of-contents {
+  background-color: silver;
+  border: 2px outset white;
+  width: 100%;
+  margin-bottom: 1rem;
+  border-collapse: collapse;
+}
+
+.table-of-contents th {
+  text-align: left;
+  padding: 0.3rem;
+  font-size: 1rem;
+}
+
+.table-of-contents td {
+  padding: 0.3rem;
+  font-size: 0.9rem;
+  border-top: 1px solid white;
+}
+
+.table-of-contents a {
+  text-decoration: none;
+  color: black;
+}

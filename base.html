@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Myrdin</title>
+  <link rel="stylesheet" href="https://unpkg.com/98.css">
+  <link rel="stylesheet" href="style.css">
+  <!-- Markdown parser (Marked) -->
+  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+</head>
+<body>
+
+  <!-- Welcome Window -->
+  <div class="window" id="welcomeWindow">
+    <div class="title-bar" id="welcomeTitleBar">
+      <div class="title-bar-text">Welcome - Myrdin's page</div>
+      <div class="title-bar-controls">
+        <button aria-label="Minimize" id="minimizeBtn"></button>
+        <button aria-label="Maximize" id="maximizeBtn"></button>
+        <button aria-label="Close" id="closeBtn"></button>
+      </div>
+    </div>
+    <div class="window-body">
+      <div class="content">
+        <h2>Welcome to my page!</h2>
+        <p>My name is <strong>Myrdin</strong>, a Dutch-English linguistics student based in Belgium.</p>
+        <p>If you’d like to discover more about me, don’t hesitate to contact me.</p>
+        <p>Take your time to explore! :)</p>
+      </div>
+    </div>
+    <div class="resize-handle"></div>
+  </div>
+
+  <!-- Blogs Window (initially hidden) -->
+  <div class="window" id="blogsWindow">
+    <div class="title-bar" id="blogsTitleBar">
+      <div class="title-bar-text">Blogs</div>
+      <div class="title-bar-controls">
+        <button aria-label="Minimize" id="minimizeBlogsBtn"></button>
+        <button aria-label="Maximize" id="maximizeBlogsBtn"></button>
+        <button aria-label="Close" id="closeBlogsBtn" onclick="closeBlogs()"></button>
+      </div>
+    </div>
+    <div class="window-body">
+      <ul id="blogsList">
+        <!-- Blog list is rendered dynamically -->
+      </ul>
+    </div>
+    <div class="resize-handle"></div>
+  </div>
+
+<!-- Start Menu -->
+<div class="start-menu" id="startMenu">
+  <ul>
+    <li id="welcomeEntry" onclick="openWelcome()">
+      <img src="media/page/welcome.png" alt="Welcome Icon" style="width:16px; height:16px; vertical-align:middle; margin-right:8px;"> Welcome
+    </li>
+    <li id="aboutMeEntry" onclick="openAboutMe()">
+      <img src="media/page/aboutme.png" alt="About Me Icon" style="width:16px; height:16px; vertical-align:middle; margin-right:8px;"> About Me
+    </li>
+    <li id="contactEntry" onclick="openContact()">
+      <img src="media/page/contact.png" alt="Contact Icon" style="width:16px; height:16px; vertical-align:middle; margin-right:8px;"> Contact
+    </li>
+    <li id="blogsEntry" onclick="openBlogs()">
+      <img src="media/page/blog.png" alt="Blogs Icon" style="width:16px; height:16px; vertical-align:middle; margin-right:8px;"> Blogs
+    </li>
+    <li id="projectsEntry" onclick="openProjects()">
+      <img src="media/page/projects.png" alt="Projects Icon" style="width:16px; height:16px; vertical-align:middle; margin-right:8px;"> Projects
+    </li>
+</div>
+
+
+
+<!-- Taskbar -->
+<div class="taskbar">
+  <button class="start-button" id="startBtn">
+    <img src="media/page/menu.png" alt="Start Menu Logo" class="start-logo">
+    <span class="start-text">Start</span>
+  </button>
+  <button class="taskbar-app-button" id="welcomeAppBtn" style="display: flex;">
+    <img src="media/page/welcome.png" alt="Welcome Icon" class="taskbar-icon">
+    <span class="app-text">Welcome</span>
+  </button>
+  <!-- Blogs Taskbar Entry with Logo -->
+  <button class="taskbar-app-button" id="blogsAppBtn" style="display: none;">
+    <img src="media/page/blog.png" alt="Blogs Icon" class="taskbar-icon">
+    <span class="app-text">Blogs</span>
+  </button>
+</div>
+  <!-- Scripts-->
+  <!-- <script type="module" src="media/page/scripts/utilities.js"></script>
+  <script type="module" src="media/page/scripts/domElements.js"></script>
+  <script type="module" src="media/page/scripts/blogManagement.js"></script>
+  <script type="module" src="media/page/scripts/windowControls.js"></script>
+  <script type="module" src="media/page/scripts/eventHandlers.js"></script> -->
+  
+  <script src="media/page/scripts/script.js"></script>
+</body>
+</html>
